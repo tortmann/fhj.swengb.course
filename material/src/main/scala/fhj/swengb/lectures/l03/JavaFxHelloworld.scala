@@ -21,7 +21,7 @@ object JavaFxHelloworld {
 
 class JavaFxHelloworld extends javafx.application.Application {
 
-  val Fxml = "/fhj/swengb/lectures/l03/Helloworld.fxml"
+  val Fxml = "/fhj/swengb/lectures/l03/Calc.fxml"
   val Css = "fhj/swengb/lectures/l03/buttonstyles.css"
 
   val loader = new FXMLLoader(getClass.getResource(Fxml))
