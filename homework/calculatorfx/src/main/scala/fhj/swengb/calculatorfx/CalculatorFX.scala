@@ -77,6 +77,9 @@ case object MINUS extends CalcOps
   */
 case object ENTER extends CalcOps
 
+
+case object CLEAR extends CalcOps
+
 // TODO implement other operations
 
 class CalculatorFXController extends Initializable {
@@ -98,6 +101,13 @@ class CalculatorFXController extends Initializable {
 
   def plus(a: Double, b: Double): Double = a + b
 
+  def minus(a: Double, b: Double): Double = a - b
+
+  def multiply(a: Double, b: Double): Double = a * b
+
+  def divide(a: Double, b: Double): Double = a / b
+
+
   def updateDisplay(head: Double): Unit = {
     displayTextField.setText(head.formatted("%f"))
   }
@@ -111,7 +121,10 @@ class CalculatorFXController extends Initializable {
         val a = numbers.head
         val b = numbers.tail.head
         numbers = plus(a, b) :: numbers.tail.tail
-      case MINUS => ???
+      case MINUS => numbers = mkNumber(reverseDigits) :: numbers
+        val a = numbers.head
+        val b = numbers.tail.head
+        numbers = minus(a, b) :: numbers.tail.tail
       case _ => ???
     }
     updateDisplay(numbers.head)
@@ -142,6 +155,8 @@ class CalculatorFXController extends Initializable {
   def btn8(): Unit = emit(8)
 
   def btn9(): Unit = emit(9)
+
+  def ac() : Unit = op(CLEAR)
 
   def plus(): Unit = op(PLUS)
 

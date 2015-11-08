@@ -50,7 +50,7 @@
                 <Button id="orange" fx:id="minus" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                 <Button id="orange" fx:id="plus" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
                 <Button id="orange" fx:id="enter" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                <Button id="functions" fx:id="ac" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="AC" GridPane.rowIndex="1" />
+                <Button id="functions" fx:id="ac" mnemonicParsing="false" onAction="#ac" prefHeight="100.0" prefWidth="100.0" text="AC" GridPane.rowIndex="1" />
                 <Button id="functions" fx:id="plusminus" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="±" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                 <Button id="functions" fx:id="prozent" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                 <TextField fx:id="displayTextField" maxHeight="100.0" maxWidth="400.0" minHeight="100.0" minWidth="400.0" prefHeight="100.0" prefWidth="400.0" promptText="&lt;Hier könnte ihre Werbung stehen! :)&gt;" BorderPane.alignment="CENTER" GridPane.columnSpan="4" />
