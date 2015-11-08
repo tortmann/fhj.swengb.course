@@ -9,43 +9,54 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fhj.swengb.calculatorfx.CalculatorFXController">
+<BorderPane maxHeight="700.0" maxWidth="400.0" minHeight="700.0" minWidth="400.0" prefHeight="700.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fhj.swengb.calculatorfx.CalculatorFXController">
     <top>
-        <Label text="CalculatorFX" BorderPane.alignment="CENTER">
+        <Label maxHeight="50.0" maxWidth="319.0" minHeight="50.0" minWidth="200.0" prefHeight="50.0" prefWidth="319.0" text="Max CalculatorFX" BorderPane.alignment="CENTER">
             <font>
                 <Font size="29.0" />
             </font>
         </Label>
     </top>
     <center>
-
+        <GridPane maxHeight="600.0" maxWidth="400.0" minHeight="600.0" minWidth="400.0" prefHeight="600.0" prefWidth="400.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" percentWidth="0.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" percentWidth="0.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="100.0" percentWidth="0.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="100.0" minHeight="100.0" percentHeight="0.0" prefHeight="100.0" />
+                <RowConstraints maxHeight="100.0" minHeight="100.0" percentHeight="0.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="100.0" percentHeight="0.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="100.0" percentHeight="0.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="100.0" percentHeight="0.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="100.0" minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Button id="zahlen" fx:id="nuhull" mnemonicParsing="false" onAction="#btn0" prefHeight="100.0" prefWidth="200.0" text="0" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                <Button id="zahlen" fx:id="eins" mnemonicParsing="false" onAction="#btn1" prefHeight="100.0" prefWidth="100.0" text="1" GridPane.rowIndex="4" />
+                <Button id="zahlen" fx:id="zwei" mnemonicParsing="false" onAction="#btn2" prefHeight="100.0" prefWidth="100.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Button id="zahlen" fx:id="drei" mnemonicParsing="false" onAction="#btn3" prefHeight="100.0" prefWidth="100.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                <Button id="zahlen" fx:id="vier" mnemonicParsing="false" onAction="#btn4" prefHeight="100.0" prefWidth="100.0" text="4" GridPane.rowIndex="3" />
+                <Button id="zahlen" fx:id="fünf" mnemonicParsing="false" onAction="#btn5" prefHeight="100.0" prefWidth="100.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <Button id="zahlen" fx:id="sechs" mnemonicParsing="false" onAction="#btn6" prefHeight="100.0" prefWidth="100.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                <Button id="zahlen" fx:id="sieben" mnemonicParsing="false" onAction="#btn7" prefHeight="100.0" prefWidth="100.0" text="7" GridPane.rowIndex="2" />
+                <Button id="zahlen" fx:id="acht" mnemonicParsing="false" onAction="#btn8" prefHeight="100.0" prefWidth="100.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <Button id="zahlen" fx:id="neun" mnemonicParsing="false" onAction="#btn9" prefHeight="100.0" prefWidth="100.0" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button id="zahlen" fx:id="komma" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="," GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                <Button id="orange" fx:id="division" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="÷" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                <Button id="orange" fx:id="mal" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="x" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                <Button id="orange" fx:id="minus" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                <Button id="orange" fx:id="plus" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                <Button id="orange" fx:id="enter" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="=" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                <Button id="functions" fx:id="ac" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="AC" GridPane.rowIndex="1" />
+                <Button id="functions" fx:id="plusminus" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="±" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button id="functions" fx:id="prozent" mnemonicParsing="false" prefHeight="100.0" prefWidth="100.0" text="\%" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <TextField fx:id="displayTextField" maxHeight="100.0" maxWidth="400.0" minHeight="100.0" minWidth="400.0" prefHeight="100.0" prefWidth="400.0" promptText="&lt;this is the text&gt;" BorderPane.alignment="CENTER" GridPane.columnSpan="4" />
+            </children>
+        </GridPane>
     </center>
-    <bottom>
-        <TextField fx:id="displayTextField" promptText="&lt;this is the text&gt;" BorderPane.alignment="CENTER" />
-    </bottom>
-   <center>
-      <FlowPane prefHeight="338.0" prefWidth="441.0" BorderPane.alignment="CENTER">
-         <children>
-              <Button mnemonicParsing="false" onAction="#btn0" text="0" />
-              <Button mnemonicParsing="false" onAction="#btn1" text="1" />
-              <Button mnemonicParsing="false" onAction="#btn2" text="2" />
-              <Button mnemonicParsing="false" onAction="#btn3" text="3" />
-              <Button mnemonicParsing="false" onAction="#btn4" text="4" />
-              <Button mnemonicParsing="false" onAction="#btn5" text="5" />
-              <Button mnemonicParsing="false" onAction="#btn6" text="6" />
-              <Button mnemonicParsing="false" onAction="#btn7" text="7" />
-              <Button mnemonicParsing="false" onAction="#btn8" text="8" />
-              <Button mnemonicParsing="false" onAction="#btn9" text="9" />
-              <Button mnemonicParsing="false" onAction="#plus" text="+" />
-              <Button mnemonicParsing="false" onAction="#minus" text="-" />
-              <Button mnemonicParsing="false" text="*" />
-              <Button mnemonicParsing="false" text="sgn" /> <!-- changes the leading sign -->
-               <Button mnemonicParsing="false"  text="." /> <!-- attention - this allows doubles as input! -->
-              <Button mnemonicParsing="false" text="/" /> <!-- attention - this allows doubles as input! -->
-              <Button mnemonicParsing="false" text="c" /> <!-- clears current calculation to the initial state -->
-              <Button mnemonicParsing="false" onAction="#enter" text="ENTER" />
-         </children>
-      </FlowPane>
-   </center>
+
 
 </BorderPane>
