@@ -104,7 +104,6 @@ class CalculatorFXController extends Initializable {
     displayTextField.setText(head.formatted("%f"))
   }
 
-
   def clear(): Unit = {
     reverseDigits = List()
     displayTextField.setText("")
