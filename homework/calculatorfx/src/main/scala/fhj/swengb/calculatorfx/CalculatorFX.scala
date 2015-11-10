@@ -104,6 +104,11 @@ class CalculatorFXController extends Initializable {
     displayTextField.setText(head.formatted("%f"))
   }
 
+  def clear(): Unit = {
+    reverseDigits = List()
+    displayTextField.setText("")
+  }
+
   def op(op: CalcOps): Unit = {
     op match {
       case ENTER =>
@@ -150,6 +155,8 @@ class CalculatorFXController extends Initializable {
   def minus(): Unit = op(MINUS)
 
   def enter(): Unit = op(ENTER)
+
+  def btnC(): Unit = clear()
 
 
 }
