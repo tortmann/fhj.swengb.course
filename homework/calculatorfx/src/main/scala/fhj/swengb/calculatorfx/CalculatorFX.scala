@@ -256,5 +256,9 @@ class CalculatorFXController extends Initializable {
 
   def comma(): Unit = op(COMMA)
 
+  //def amarcss(): Unit = setSkin(Stage, FxmlAbajric, CssAbajric)
+
+  //def dekillacss(): Unit = setSkin(Stage, FxmlAbajric, CssDeKilla)
+
 }
 
