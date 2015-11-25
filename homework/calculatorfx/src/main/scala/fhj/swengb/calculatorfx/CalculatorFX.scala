@@ -27,8 +27,12 @@ class CalculatorFX extends javafx.application.Application {
   val FxmlDeKilla = "/fhj/swengb/calculatorfx/calculatorfx_dekilla.fxml"
   val CssDeKilla = "fhj/swengb/calculatorfx/calculatorfx_dekilla.css"
 
+  //val DefaultFxml = FxmlAbajric
+  //val DefaultCss = CssAbajric
+
   val DefaultFxml = FxmlDeKilla
   val DefaultCss = CssDeKilla
+
 
   def mkFxmlLoader(fxml: String): FXMLLoader = {
     new FXMLLoader(getClass.getResource(fxml))
@@ -51,7 +55,6 @@ class CalculatorFX extends javafx.application.Application {
     stage.getScene.getStylesheets.clear()
     stage.getScene.getStylesheets.add(css)
   }
-
 
 }
 
@@ -194,6 +197,7 @@ class CalculatorFXController extends Initializable {
           numbers = mkNumber(reverseDigits) :: numbers
           val a = numbers.tail.head
           numbers = sgn(a) :: numbers.tail.tail
+          println(numbers)
         case ENTER =>
           numbers = mkNumber(reverseDigits) :: numbers
         case PLUS =>
@@ -201,6 +205,7 @@ class CalculatorFXController extends Initializable {
           val a = numbers.head
           val b = numbers.tail.head
           numbers = plus(a, b) :: numbers.tail.tail
+          println(numbers)
         case MINUS =>
           numbers = mkNumber(reverseDigits) :: numbers
           val a = numbers.head
