@@ -18,7 +18,7 @@ object Avatarix {
     Application.launch(classOf[Avatarix], args: _*)
 
 
-    val Student = Students.mwageneder.githubUsername
+    val Student = Students.mwageneder.gitHubUser
 
     println("Name: " + Student.name)
     println("Login: " + Student.login)
