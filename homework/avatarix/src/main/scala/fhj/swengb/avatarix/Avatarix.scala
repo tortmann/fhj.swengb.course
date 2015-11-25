@@ -9,13 +9,25 @@ import javafx.scene.layout.BorderPane
 import javafx.scene.{Parent, Scene}
 import javafx.stage.Stage
 
-import fhj.swengb.Speakers
+import fhj.swengb.{Students, Speakers}
 
 import scala.util.control.NonFatal
 
 object Avatarix {
   def main(args: Array[String]) {
     Application.launch(classOf[Avatarix], args: _*)
+
+
+    val Student = Students.mwageneder.githubUsername
+
+    println("Name: " + Student.name)
+    println("Login: " + Student.login)
+    println("Avatar URL: " + Student.avatarUrl)
+    println("User Page: " + Student.userUrl)
+    println("Followers URL: " + Student.followersUrl)
+    println("Following URL: " + Student.followingUrl)
+
+
   }
 }
 
