@@ -35,6 +35,8 @@ class Avatarix extends javafx.application.Application {
 
 
   val Fxml = "/fhj/swengb/avatarix/Avatarix.fxml"
+  val Fxml_detail = "/fhj/swengb/avatarix/Avatarix_Detail.fxml"
+
   val Css = "fhj/swengb/avatarix/Avatarix.css"
 
   val loader = new FXMLLoader(getClass.getResource(Fxml))
