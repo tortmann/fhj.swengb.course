@@ -52,7 +52,7 @@ sealed trait Person {
     import GitHub._
     import spray.json._
 
-    val webserviceString: String = scala.io.Source.fromURL(new URL(s"https://api.github.com/users/$githubUsername")).mkString
+    val webserviceString: String = scala.io.Source.fromURL(new URL(s"https://api.github.com/users/$githubUsername?client_id=0db09a7ce1c7483b9dbe&client_secret=56f9c520fac562a4e6945f2c82749cba49102a99")).mkString
     webserviceString.parseJson.convertTo[User]
   }
 
