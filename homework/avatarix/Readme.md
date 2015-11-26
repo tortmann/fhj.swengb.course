@@ -12,33 +12,35 @@ At the right side, there is also a scroll-bar for navigation.
 
 No installation needed.
 
-GENERAL USAGE NOTES
+# GENERAL USAGE NOTES
 --------------
 
-# When the program starts, you see a overview of all the students.
+When the program starts, you see a overview of all the students.
 
-# Click on one of the images to open a new window with more details about a student.
+Click on one of the images to open a new window with more details about a student.
 
-# Following information will be displayed: username, first name, last name, follwers, following.
+Following information will be displayed: username, first name, last name, follwers, following.
 
-# Just close the window to get back to the standard view.
+Just close the window to get back to the standard view.
 
-# To exit the application, simply close the window by pressing X in the top right corner.
+To exit the application, simply close the window by pressing X in the top right corner.
 
 
+
+# WORK DISTRIBUTION
+--------------
 
 ## PARSER ##
 by Thomas Ortmann, Maximilian Wageneder, Andreas Seebacher, Daniel Folk
---------------
+
 
 ## DESIGN ##
 by Nina Spalek, Lukas Zefferer
---------------
+
 
 ## TESTING ##
-by Andreas Seebacher, Daniel Folk, Markus Zsifkovitz
---------------
+by Andreas Seebacher, Daniel Folk, Markus Zsifkovits
+
 
 ## DOCUMENTATION & README ##
 by Marcel Yildiz, Christoph Dirnbauer-Karner
---------------
