@@ -67,13 +67,13 @@ class AvatarixController extends Initializable {
       counter2 += 1
     }
 
-/**
+
     var counter3 = 0;
     for (student <- Students.studentGroup3) {
       grid_g3.getChildren.toArray()(counter3).asInstanceOf[ImageView].setImage(new Image(student.gitHubUser.avatarUrl.toString))
       counter3 += 1
     }
-*/
+
 
   }
 
