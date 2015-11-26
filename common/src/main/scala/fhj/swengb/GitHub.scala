@@ -9,7 +9,7 @@ import spray.json._
  */
 object GitHub {
 
-  case class User(  name: String,
+  case class User(  //name: String,
                     login: String,
                     avatarUrl: URL,
                     userUrl: URL,
@@ -22,7 +22,7 @@ object GitHub {
     implicit object GithubUserJsonFormat extends RootJsonFormat[User] {
       def write(user: User) =
         JsArray(
-          JsString(user.name),
+          //JsString(user.name),
           JsString(user.login),
           JsString(user.avatarUrl.toString),
           JsString(user.userUrl.toString),
@@ -38,7 +38,7 @@ object GitHub {
       def read(value: JsValue) = {
         value match {
           case JsObject(m) =>
-            val JsString(name) = m("name")
+            //val JsString(name) = m("name")
             val JsString(login) = m("login")
             val JsString(a_url) = m("avatar_url")
             val JsString(u_url) = m("url")
@@ -46,7 +46,7 @@ object GitHub {
             val JsString(followers_url) = m("followers_url")
             val JsString(following_url) = m("following_url")
 
-            User( name,
+            User( //name,
               login,
               new URL(a_url),
               new URL(u_url),
