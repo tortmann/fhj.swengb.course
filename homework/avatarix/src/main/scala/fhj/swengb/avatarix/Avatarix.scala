@@ -17,15 +17,17 @@ object Avatarix {
   def main(args: Array[String]) {
     Application.launch(classOf[Avatarix], args: _*)
 
+  val Student = Students.mwageneder.gitHubUser
 
-    val Student = Students.mwageneder.gitHubUser
+  println("Name: " + Student.name)
+  println("Login: " + Student.login)
+  println("Avatar URL: " + Student.avatarUrl)
+  println("User Page: " + Student.userUrl)
+  println("Followers URL: " + Student.followersUrl)
+  println("Following URL: " + Student.followingUrl)
 
-    println("Name: " + Student.name)
-    println("Login: " + Student.login)
-    println("Avatar URL: " + Student.avatarUrl)
-    println("User Page: " + Student.userUrl)
-    println("Followers URL: " + Student.followersUrl)
-    println("Following URL: " + Student.followingUrl)
+
+
 
 
   }
@@ -58,12 +60,13 @@ class Avatarix extends javafx.application.Application {
 
 class AvatarixController extends Initializable {
   @FXML var borderPane: BorderPane = _
+  @FXML var iview_00_g1 : ImageView = _
 
   override def initialize(location: URL, resources: ResourceBundle): Unit = {
-    val url: String = Speakers.rladstaetter.gitHubUser.avatarUrl.toString
-    //val url = Students.mfuchs.gitHubUser.avatarUrl.toString
+    val url: String = Students.mwageneder.gitHubUser.avatarUrl.toString
 
-    borderPane.setCenter(new ImageView(new Image(url)))
+    //borderPane.setCenter(new ImageView(new Image(url)))
+    iview_00_g1.setImage(new Image(url))
   }
 
 }
