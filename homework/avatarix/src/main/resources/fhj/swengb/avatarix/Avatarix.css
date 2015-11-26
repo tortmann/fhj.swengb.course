@@ -1,3 +1,19 @@
+#grlabel{
+    -fx-font-weight: bold;
+    -fx-font-size: 14pt;
+}
+
+#grid {
+    -fx-border-color: black;
+    -fx-border-width: 2pt;
+    -fx-background-color: #bdbaba;
+    -fx-effect: dropshadow(three-pass-box, white, 50, 0, 0, 0)
+}
+
+#iview{
+    -fx-effect: dropshadow(three-pass-box, black, 25, 0, 0, 0)
+}
+
 #gray{
     -fx-background-color: #D3D3D3;
     -fx-border-color: black;

@@ -51,15 +51,13 @@ class AvatarixController extends Initializable {
   @FXML var grid_g3: GridPane = _
 
   override def initialize(location: URL, resources: ResourceBundle): Unit = {
-
-
-
+/**
+  * */
     var counter1 = 0;
     for (student <- Students.studentGroup1) {
       grid_g1.getChildren.toArray()(counter1).asInstanceOf[ImageView].setImage(new Image(student.gitHubUser.avatarUrl.toString))
       counter1 += 1
     }
-
 
     var counter2 = 0;
     for (student <- Students.studentGroup2) {
@@ -67,13 +65,11 @@ class AvatarixController extends Initializable {
       counter2 += 1
     }
 
-
     var counter3 = 0;
     for (student <- Students.studentGroup3) {
       grid_g3.getChildren.toArray()(counter3).asInstanceOf[ImageView].setImage(new Image(student.gitHubUser.avatarUrl.toString))
       counter3 += 1
     }
-
 
   }
 
