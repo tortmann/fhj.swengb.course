@@ -36,7 +36,7 @@ class Avatarix extends javafx.application.Application {
       loader.load[Parent]() // side effect
       val scene = new Scene(loader.getRoot[Parent])
       stage.setScene(scene)
-      //stage.getScene.getStylesheets.add(Css)
+      stage.getScene.getStylesheets.add(Css)
       stage.show()
     } catch {
       case NonFatal(e) => e.printStackTrace()
