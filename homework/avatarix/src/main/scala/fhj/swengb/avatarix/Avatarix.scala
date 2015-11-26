@@ -5,9 +5,10 @@ import java.util.ResourceBundle
 import javafx.application.Application
 import javafx.fxml.{FXML, FXMLLoader, Initializable}
 import javafx.scene.image.{Image, ImageView}
-import javafx.scene.layout.BorderPane
+import javafx.scene.layout.{GridPane, BorderPane}
 import javafx.scene.{Parent, Scene}
 import javafx.stage.Stage
+
 
 import fhj.swengb.{Students, Speakers}
 
@@ -16,20 +17,6 @@ import scala.util.control.NonFatal
 object Avatarix {
   def main(args: Array[String]) {
     Application.launch(classOf[Avatarix], args: _*)
-
-  val Student = Students.mwageneder.gitHubUser
-
-  println("Name: " + Student.name)
-  println("Login: " + Student.login)
-  println("Avatar URL: " + Student.avatarUrl)
-  println("User Page: " + Student.userUrl)
-  println("Followers URL: " + Student.followersUrl)
-  println("Following URL: " + Student.followingUrl)
-
-
-
-
-
   }
 }
 
@@ -59,14 +46,35 @@ class Avatarix extends javafx.application.Application {
 
 
 class AvatarixController extends Initializable {
-  @FXML var borderPane: BorderPane = _
-  @FXML var iview_00_g1 : ImageView = _
+  @FXML var grid_g1: GridPane = _
+  @FXML var grid_g2: GridPane = _
+  @FXML var grid_g3: GridPane = _
 
   override def initialize(location: URL, resources: ResourceBundle): Unit = {
-    val url: String = Students.mwageneder.gitHubUser.avatarUrl.toString
 
-    //borderPane.setCenter(new ImageView(new Image(url)))
-    iview_00_g1.setImage(new Image(url))
+
+
+    var counter1 = 0;
+    for (student <- Students.studentGroup1) {
+      grid_g1.getChildren.toArray()(counter1).asInstanceOf[ImageView].setImage(new Image(student.gitHubUser.avatarUrl.toString))
+      counter1 += 1
+    }
+
+
+    var counter2 = 0;
+    for (student <- Students.studentGroup2) {
+      grid_g2.getChildren.toArray()(counter2).asInstanceOf[ImageView].setImage(new Image(student.gitHubUser.avatarUrl.toString))
+      counter2 += 1
+    }
+
+
+    var counter3 = 0;
+    for (student <- Students.studentGroup3) {
+      grid_g3.getChildren.toArray()(counter3).asInstanceOf[ImageView].setImage(new Image(student.gitHubUser.avatarUrl.toString))
+      counter3 += 1
+    }
+
+
   }
 
 }

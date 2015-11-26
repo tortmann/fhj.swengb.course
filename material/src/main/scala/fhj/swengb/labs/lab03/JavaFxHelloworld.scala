@@ -25,20 +25,24 @@ object JavaFxHelloworld {
 
 class JavaFxHelloworld extends javafx.application.Application {
 
-
-  val Fxml = "/fhj/swengb/lectures/l03/Helloworld.fxml"
+  val Fxml = "/fhj/swengb/lectures/l03/Calc.fxml"
   val Css = "fhj/swengb/lectures/l03/buttonstyles.css"
 
   val loader = new FXMLLoader(getClass.getResource(Fxml))
 
   override def start(stage: Stage): Unit =
     try {
-      stage.setTitle("Helloworld")
+      stage.setTitle("Calculator") // Window title
       loader.load[Parent]() // side effect
       val scene = new Scene(loader.getRoot[Parent])
       stage.setScene(scene)
       stage.getScene.getStylesheets.add(Css)
+
       stage.show()
+
+      stage.setMinWidth(stage.getWidth());
+      stage.setMinHeight(stage.getHeight());
+
     } catch {
       case NonFatal(e) => e.printStackTrace()
     }
